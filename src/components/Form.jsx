@@ -28,6 +28,10 @@ export default class Form extends Component {
         updatedArray.push({name: this.state.ename, department:this.state.dept, rating: this.state.rat})
         this.setState({show:false, arr: updatedArray});
     }
+    goBack = () =>{
+        this.setState({show:true});
+        console.log('Clicked back button',this.state);
+      }
     render() {
         return (   
             <div className="parentDiv">
@@ -48,7 +52,7 @@ export default class Form extends Component {
             
                 </div>
                  
-                 : <ResultDisplay dt={this.state.show} data={this.state.arr}/>}
+                 : <ResultDisplay dt={this.goBack} data={this.state.arr}/>}
 
 
             </div>

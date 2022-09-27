@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 
 export default class ResultDisplay extends Component {
-goBack = () =>{
-  this.setState({show:true});
-  console.log('Clicked back button',this.state);
 
-
-}
   render() {
     return (
        
@@ -24,7 +19,7 @@ goBack = () =>{
             } )}
               
           </div>
-          <button className='back' onClick={this.goBack}>Back</button>  
+          <button className='back' onClick={this.props.dt}>Back</button>  
           </div>
         
 
